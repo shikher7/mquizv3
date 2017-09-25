@@ -1,4 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 
@@ -36,24 +35,6 @@ function check()
   {
     alert("Plese Enter Your Name");
 	document.form1.name.focus();
-	return false;
-  }
-  if(document.form1.address.value=="")
-  {
-    alert("Plese Enter Address");
-	document.form1.address.focus();
-	return false;
-  }
-  if(document.form1.city.value=="")
-  {
-    alert("Plese Enter City Name");
-	document.form1.city.focus();
-	return false;
-  }
-  if(document.form1.phone.value=="")
-  {
-    alert("Plese Enter Contact No");
-	document.form1.phone.focus();
 	return false;
   }
   if(document.form1.email.value=="")
@@ -109,18 +90,6 @@ include("header.php");
          <tr>
            <td class="style7">Name</td>
            <td><input name="name" type="text" id="name"></td>
-         </tr>
-         <tr>
-           <td valign="top" class="style7">Address</td>
-           <td><textarea name="address" id="address"></textarea></td>
-         </tr>
-         <tr>
-           <td valign="top" class="style7">City</td>
-           <td><input name="city" type="text" id="city"></td>
-         </tr>
-         <tr>
-           <td valign="top" class="style7">Phone</td>
-           <td><input name="phone" type="text" id="phone"></td>
          </tr>
          <tr>
            <td valign="top" class="style7">E-mail</td>

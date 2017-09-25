@@ -1,17 +1,21 @@
 body {
 	margin-left: 0px;
 	margin-top: 0px;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif
 }
 .style1 {
 	color: #FFFFFF;
 	font-weight: bold;
 }
 .style2 {
-	color: #990000;
+	color: Black;
 	font-weight: bold;
+	text-decoration:blink;
+	font-size:20px;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif
 }
 .style4 {
-	color: #000000;
+	color: black;
 	font-weight: bold;
 }
 .style5 {color: #990033}
@@ -23,7 +27,20 @@ body {
 .style8 {
 	color: #6633CC;
 	font-weight: bold;
+	text-decoration:blink;
+	font-size:17px;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 }
+
+style81 {
+	color: #6633CC;
+	font-weight: bold;
+	text-decoration:blink;
+	font-size:17px;
+	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+	text-decoration:line-through;
+}
+
 a:link {
 	color: #330066;
 	text-decoration: none;
@@ -39,13 +56,13 @@ a:visited {
 .head1 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 24px;
-	color: #FF0000;
+	color: Blue;
 	text-align: center;
 	font-weight: bold;
 }
 .errors {
 
-	color: #FF0000;
+	color: blue;
 	font-weight: bold;
 }
 .tot {
@@ -62,9 +79,10 @@ a:visited {
 }
 .tans {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
-	color:#00CC66 ;
+	color:#00CC66;
+	text-transform:capitalize;
 }
 .fans {
 	font-family: Arial, Helvetica, sans-serif;

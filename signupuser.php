@@ -1,4 +1,3 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>User Signup</title>
@@ -17,7 +16,7 @@ if (mysql_num_rows($rs)>0)
 	echo "<br><br><br><div class=head1>Login Id Already Exists</div>";
 	exit;
 }
-$query="insert into mst_user(user_id,login,pass,username,address,city,phone,email) values('$uid','$lid','$pass','$name','$address','$city','$phone','$email')";
+$query="insert into mst_user(user_id,login,pass,username,email) values('$uid','$lid','$pass','$name','$email')";
 $rs=mysql_query($query)or die("Could Not Perform the Query");
 echo "<br><br><br><div class=head1>Your Login ID  $lid Created Sucessfully</div>";
 echo "<br><div class=head1>Please Login using your Login ID to take Quiz</div>";

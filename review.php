@@ -2,6 +2,7 @@
 session_start();
 extract($_POST);
 extract($_SESSION);
+error_reporting(1);
 include("database.php");
 if($submit=='Finish')
 {
@@ -40,11 +41,11 @@ $row= mysql_fetch_row($rs);
 echo "<form name=myfm method=post action=review.php>";
 echo "<table width=100%> <tr> <td width=30>&nbsp;<td> <table border=0>";
 $n=$_SESSION[qn]+1;
-echo "<tR><td><span class=style2>Que ".  $n .": $row[2]</style>";
+echo "<tR><td><span class=style2>Question ".  $n .": $row[2]</style><hr>";
 echo "<tr><td class=".($row[7]==1?'tans':'style8').">$row[3]";
 echo "<tr><td class=".($row[7]==2?'tans':'style8').">$row[4]";
 echo "<tr><td class=".($row[7]==3?'tans':'style8').">$row[5]";
-echo "<tr><td class=".($row[7]==4?'tans':'style8').">$row[6]";
+echo "<tr><td class=".($row[7]==4?'tans':'style8').">$row[6]<br><hr>";
 if($_SESSION[qn]<mysql_num_rows($rs)-1)
 echo "<tr><td><input type=submit name=submit value='Next Question'></form>";
 else
