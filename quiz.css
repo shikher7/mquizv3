@@ -23,23 +23,20 @@ body {
 .style7 {
 	color: #993300;
 	font-weight: bold;
+	animation-name:change;
+	animation-duration:10s;	
+}
+@keyframes change {
+    from {color:#993300;}
+    to {color:orange;}
 }
 .style8 {
 	color: #6633CC;
-	font-weight: bold;
-	text-decoration:blink;
 	font-size:17px;
 	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
 }
 
-style81 {
-	color: #6633CC;
-	font-weight: bold;
-	text-decoration:blink;
-	font-size:17px;
-	font-family:Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
-	text-decoration:line-through;
-}
+
 
 a:link {
 	color: #330066;
@@ -55,7 +52,7 @@ a:visited {
 }
 .head1 {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 30px;
 	color: Blue;
 	text-align: center;
 	font-weight: bold;

@@ -5,12 +5,11 @@ error_reporting(1);
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Adminstrative AreaOnline Quiz </title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Adminstrative Area</title>
 <link href="../quiz.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body alink="orange">
 <?php
 include("header.php");
 extract($_POST);
@@ -34,9 +33,9 @@ else if(!isset($_SESSION[alogin]))
 }
 ?>
 
-<p class="head1">Welcome to Admistrative Area </p>
-<div style="margin:auto;width:90%;height:500px;box-shadow:2px 1px 2px 2px #CCCCCC;text-align:left">
-<div style="margin-left:20%;padding-top:5%">
+<p class="head1">Welcome Administrator</p><br>
+<div style="margin:auto;width:30%;box-shadow:2px 3px 2px 3px #CCCCCC;text-align:left">
+<div align="center" style="padding-top:5%">
 <p class="style7"><a href="subadd.php">Add Subject</a></p>
 <p class="style7"><a href="testadd.php">Add Test</a></p>
 <p class="style7"><a href="questionadd.php">Add Question </a></p>

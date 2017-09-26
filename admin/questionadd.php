@@ -66,22 +66,19 @@ return true;
 }
 </script>
 
-<div style="margin:auto;width:90%;height:500px;box-shadow:2px 1px 2px 2px #CCCCCC;text-align:left">
+<div style="margin:auto;width:80%;box-shadow:2px 1px 2px 2px #CCCCCC; border-radius:10px ;text-align:left">
+<br>
 <form name="form1" method="post" onSubmit="return check();">
-  <table width="80%"  border="1" align="center">
+  <table width="80%" align="center">
     <tr>
-      <td width="24%" height="32"><div align="left"><strong>Select Test Name </strong></div></td>
+      <td width="24%" height="32"><div align="left"><strong>Test Name </strong></div></td>
       <td width="1%" height="5">  
       <td width="75%" height="32"><select name="testid" id="testid">
+      <option value="Select" selected>Select</option>
 <?php
 $rs=mysql_query("Select * from mst_test order by test_name",$cn);
 	  while($row=mysql_fetch_array($rs))
 {
-if($row[0]==$testid)
-{
-echo "<option value='$row[0]' selected>$row[2]</option>";
-}
-else
 {
 echo "<option value='$row[0]'>$row[2]</option>";
 }

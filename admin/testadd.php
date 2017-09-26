@@ -15,7 +15,7 @@ require("../database.php");
 include("header.php");
 
 
-echo "<br><h2><div  class=head1>Add Test</div></h2>";
+echo "<br><h1><div class=head1>Add Test</div></h1>";
 if($_POST[submit]=='Save' || strlen($_POST['subid'])>0 )
 {
 extract($_POST);
@@ -41,10 +41,11 @@ return false;
 return true;
 }
 </script>
+<div style="margin:auto;width:46%;box-shadow:2px 3px 2px 3px #CCCCCC;text-align:left">
 <form name="form1" method="post" onSubmit="return check();">
   <table width="58%"  border="0" align="center">
     <tr>
-      <td width="49%" height="32"><div align="left"><strong>Enter Subject ID </strong></div></td>
+      <td width="49%" height="32"><div align="left"><strong>Topic</strong></div></td>
       <td width="3%" height="5">  
       <td width="48%" height="32"><select name="subid">
 <?php
@@ -64,15 +65,23 @@ echo "<option value='$row[0]'>$row[1]</option>";
       </select>
         
     <tr>
-        <td height="26"><div align="left"><strong> Enter Test Name </strong></div></td>
+        <td height="26"><div align="left"><strong> Test Name </strong></div></td>
         <td>&nbsp;</td>
 	  <td><input name="testname" type="text" id="testname"></td>
     </tr>
     <tr>
-      <td height="26"><div align="left"><strong>Enter Total Question </strong></div></td>
+      <td height="26"><div align="left"><strong>Number of Questions</strong></div></td>
       <td>&nbsp;</td>
       <td><input name="totque" type="text" id="totque"></td>
     </tr>
+    <tr>
+    </tr><tr>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+    
     <tr>
       <td height="26"></td>
       <td>&nbsp;</td>
@@ -80,4 +89,6 @@ echo "<option value='$row[0]'>$row[1]</option>";
     </tr>
   </table>
 </form>
+
+</div>
 <p>&nbsp; </p>

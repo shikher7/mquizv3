@@ -129,6 +129,9 @@ echo "<h1 class='style8' align=center>Welcome to M-Quiz Exam</h1>";
         <tr>
           <td colspan="2"><div align="center"><span class="style4">New User ? <a href="signup.php" style="color:Blue">Signup Free</a></span></div></td>
           </tr>
+          <tr>
+          <td colspan="2"><div align="left"><span class="style4">Admin ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="admin/index.php" style="color:Blue">Login here</a></span></div></td>
+          </tr>
       </table>
 
     </form>

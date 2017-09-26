@@ -38,18 +38,19 @@ else if($submit=='Next Question' )
 $rs=mysql_query("select * from mst_useranswer where sess_id='" . session_id() ."'",$cn) or die(mysql_error());
 mysql_data_seek($rs,$_SESSION[qn]);
 $row= mysql_fetch_row($rs);
+echo "<br><br><div style='margin:auto; width:60%; text-align:center;box-shadow:2px 3px 2px 3px #CCCCCC; border-radius:10px ;text-align:left'>";
 echo "<form name=myfm method=post action=review.php>";
-echo "<table width=100%> <tr> <td width=30>&nbsp;<td> <table border=0>";
+echo "<table align='center'> <tr> <td width=30>&nbsp;<td> <table border=0>";
 $n=$_SESSION[qn]+1;
-echo "<tR><td><span class=style2>Question ".  $n .": $row[2]</style><hr>";
-echo "<tr><td class=".($row[7]==1?'tans':'style8').">$row[3]";
-echo "<tr><td class=".($row[7]==2?'tans':'style8').">$row[4]";
-echo "<tr><td class=".($row[7]==3?'tans':'style8').">$row[5]";
-echo "<tr><td class=".($row[7]==4?'tans':'style8').">$row[6]<br><hr>";
+echo "<tr align='center'><td><span class=style2>Question ".  $n .": $row[2]</style><hr>";
+echo "<tr align='center'><td class=".($row[7]==1?'tans':'style8').">$row[3]";
+echo "<tr align='center'><td class=".($row[7]==2?'tans':'style8').">$row[4]";
+echo "<tr align='center'><td class=".($row[7]==3?'tans':'style8').">$row[5]";
+echo "<tr align='center'><td class=".($row[7]==4?'tans':'style8').">$row[6]<br><hr>";
 if($_SESSION[qn]<mysql_num_rows($rs)-1)
-echo "<tr><td><input type=submit name=submit value='Next Question'></form>";
+echo "<tr><td colspan=2 align=center class='errors'><input class='errors' style='background-color:blue; background-size:auto; color:white; border:#0000FF' type=submit name=submit value='Next Question'></form>";
 else
-echo "<tr><td><input type=submit name=submit value='Finish'></form>";
+echo "<tr><td colspan=2 align=center class='errors'><input class='errors' style='background-color:blue; background-size:auto; color:white; border:#0000FF' type=submit name=submit value='Finish'></form></div>";
 
 echo "</table></table>";
 ?>

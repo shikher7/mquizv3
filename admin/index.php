@@ -5,8 +5,7 @@ session_start()
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Administrative Login - Online Exam</title>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Administrative Login</title>
 <link href="../quiz.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -15,9 +14,9 @@ session_start()
 include("header.php");
 ?>
 
-<p class="head1">Adminstrative Login </p>
+<p class="head1">Adminstrative Login</p>
 <form name="form1" method="post" action="login.php">
-<table width="490" border="0">
+<table align="center" style="border-style:groove; border-color:blue" width="450">
   <tr>
     <td width="106"><span class="style2"></span></td>
     <td width="132"><span class="style2"><span class="head1"><img src="login.jpg" width="131" height="155"></span></span></td>
@@ -41,8 +40,7 @@ include("header.php");
 </table></td>
   </tr>
 </table>
-
 </form>
-
+<p align="center"><a style="color:blue; font-size:16px"href="../index.php">Back to Homepage</a></p>
 </body>
 </html>
