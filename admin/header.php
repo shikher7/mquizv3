@@ -4,6 +4,31 @@ body {
 	margin-left: 0px;
 	margin-top: 0px;
 }
+input[type= "text"], input[type="password"]{
+    outline: none;
+    padding:10px;
+    display: block;
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid #993300;
+    margin-top: 10px;
+}
+input[type="submit"]{
+    padding: 10px;
+    width: 320px;
+    color:#fff;
+    background: #0098cb;
+    margin: 20px auto;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    border:0;
+}
+input[type="submit"]:hover{
+    background:#00b8eb;
+}
+
+
 -->
 </style>
     <div>
