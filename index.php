@@ -6,7 +6,6 @@ session_start();
 <head>
 	<style>
   body {
-        background: url('1.jpg') no-repeat center fixed;
         margin: 0px;
         padding: 0px;
         font-family: 'Comfortaa', cursive;
@@ -83,61 +82,64 @@ echo "<h1 style='color:blue;' align=center>Welcome to M-Quiz Exam</h1>";
 
 
 ?>
-<table width="100%" border="0">
-  <tr>
-    <td width="70%" height="25">&nbsp;</td>
-    <td width="1%" bgcolor="blue"><div align="center" class="style1">User Login </div></td>
-  </tr>
-  <tr>
-    <td height="296" valign="top"><div align="center">
-        <h1 class="style8">Welcome to Online Quiz</h1>
-<p align="left" class="style5">&nbsp;</p>
-      <blockquote>
-          <p align="left" class="style5"><span class="style7">Welcome to Mquiz Online
-            quizing website. This Site will provide the quiz for various subject of interest.
-            You need to login for the take the online exam.</span></p>
-      </blockquote>
-         <span class="style5"><img src="image/paathshala.jpg" width="129" height="100"><span class="style7"><img src="image/HLPBUTT2.JPG" width="50" height="50"><img src="image/BOOKPG.JPG" width="43" height="43"></span>        </span>	
-    </div></td>
-    <td valign="top">
-	  <form name="form1" method="post" action="">
-      <table width="200" style="border-style:solid; border-color:blue; border-width:5px">
-        <tr>
-          <td><span class="style2">Login ID </span></td>
-          <td><input name="loginid" type="text" id="loginid2"></td>
-        </tr>
-        <tr>
-          <td><span class="style2">Password</span></td>
-          <td><input name="pass" type="password" id="pass2"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><span class="errors">
-            <?php
-		  if(isset($found))
-		  {
-		  	echo "Invalid Username or Password";
-		  }
-		  ?>
-          </span></td>
-          </tr>
-        <tr>
-          <td colspan=2 align=center class="errors">
-		  <input name="submit" type="submit" id="submit" value="Login"></td>
-        </tr>
-			</table>
-			<table>
-        <tr>
-          <td colspan="2"><div align="center"><span class="style4">New User ? <a href="signup.php" style="color:Blue">Signup Free</a></span></div></td>
-          </tr>
-          <tr>
-          <td colspan="2"><div align="left"><span class="style4">Admin ? &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="admin/index.php" style="color:Blue">Login here</a></span></div></td>
-          </tr>
-      </table>
+<h1 style=" color: rgba(28,129,219,0.87); font-size: 36px; font-family: Palatino; padding-bottom: 10px;">Welcome to Online Quiz !</h1>
 
-    </form>
-	</td>
-  </tr>
-</table>
+<div style='margin:auto; width:60%; text-align:center;box-shadow:2px 3px 2px 3px #CCCCCC; border-radius:10px ;text-align:left; padding:2%'>
+    <table width="100%" border="0" style="margin-left: 12.5%">
+        <tr>
+            <td width="132" rowspan="2" valign="top"><span class="style8"><img src="images/paathshala.jpg" width="131" height="155"></span></td>
+            <td width="468" height="57"><h1 style="margin-left: 12.5%"><span class="style5"><u>User Login</u></span></h1></td>
+        </tr>
+        <form name="form1" method="post" action="">
+        <tr>
+            <td><div name="form1" method="post" action="signupuser.php" onSubmit="return check();">
+                    <table width="301" border="0" align="left">
+                        <tr>
+                            <td><span class="style2">Login ID </span></td>
+                            <td><input name="loginid" type="text" id="loginid2"></td>
+                        </tr>
+                        <tr>
+                            <td><span class="style2">Password</span></td>
+                            <td><input name="pass" type="password" id="pass2"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><span class="errors">
+            <?php
+            if(isset($found))
+            {
+                echo "Invalid Username or Password";
+            }
+            ?>
+          </span></td>
+                        </tr>
+                        <tr>
+                            <td colspan=2 align=center class="errors">
+                                <input name="submit" type="submit" id="submit" value="Login"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><bold>New User ? &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</bold><u> <a href="signup.php" style="font-weight: 900;">SIGNUP HERE</a>
+                                </u></td>
+                        </tr>
+                        <tr>
+                        <td>&nbsp;</td>
+                        <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><bold>Are you an admin ?</bold> <u><a href="admin/index.php" style="font-weight: 900;">LOGIN HERE</a></u>
+                            </td>
+                        </tr>
+                    </table>
+
+                    </form>
+                </div></td>
+        </tr>
+
+    </table>
+</div>
+
 
 </body>
 </html>

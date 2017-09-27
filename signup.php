@@ -142,7 +142,7 @@ include("header.php");
          </tr>
            <tr>
                <td>&nbsp;</td>
-               <td>Already have a account <a href="index.php">SIGN IN</a>
+               <td><bold>Already have a account</bold> <a href="index.php" style="font-weight: 900;">SIGN IN</a>
                </td>
            </tr>
        </table>
