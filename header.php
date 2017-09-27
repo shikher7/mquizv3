@@ -125,7 +125,7 @@ while($row1=mysql_fetch_row($r1))
 	 echo "</div>
 	 </div> 
 	<a style='color:white' href='result.php'>Result</a>
-	<a style='color:white' href='#ranking_wala_page_daalde_yahan_(header.php_ka_line_128)'>Ranking</a>
+	<a style='color:white' href='ranking.php'>Ranking</a>
 	<div style='float:right'>
 	<a style='color:white' href='signout.php'>Signout</a>
 	</div>
