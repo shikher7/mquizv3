@@ -41,7 +41,7 @@ return false;
 return true;
 }
 </script>
-<div style="margin:auto;width:46%;box-shadow:2px 3px 2px 3px #CCCCCC;text-align:left">
+<div style="margin:auto;width:60%;box-shadow:2px 3px 2px 3px #CCCCCC;text-align:left">
 <form name="form1" method="post" onSubmit="return check();">
   <table width="58%"  border="0" align="center">
     <tr>

@@ -64,14 +64,14 @@ if(isset($submit))
 include("header.php");
 if (isset($_SESSION[login]))
 {
-echo "<h1 class='style8' align=center>Welcome to M-Quiz Exam</h1>";
-		echo '<table width="28%"  border="0" align="center">
+echo "<h1 style='color:blue;' align=center>Welcome to M-Quiz Exam</h1>";
+		echo '<table align="center">
   <tr>
-    <td width="7%" height="65" valign="bottom"><img src="image/HLPBUTT2.JPG" width="50" height="50" align="middle"></td>
-    <td width="93%" valign="bottom" bordercolor="#0000FF"> <a href="sublist.php" class="style4">Topics for Quiz </a></td>
+    <td width="30%" height="65" align="right" valign="bottom"><img src="image/HLPBUTT2.JPG" width="50" height="50" align="middle"></td>
+    <td width="50%%" valign="bottom" bordercolor="#0000FF"> <a href="sublist.php" class="style4">Topics for Quiz </a></td>
   </tr>
   <tr>
-    <td height="58" valign="bottom"><img src="image/DEGREE.JPG" width="43" height="43" align="absmiddle"></td>
+    <td height="58" align="right" valign="bottom"><img src="image/DEGREE.JPG" width="43" height="43" align="absmiddle"></td>
     <td valign="bottom"> <a href="result.php" class="style4">Result </a></td>
   </tr>
 </table>';

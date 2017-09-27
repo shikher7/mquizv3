@@ -1,5 +1,7 @@
 <?php
 session_start();
+include("header.php");
+include("database.php");
 ?>
 <html>
 <head>
@@ -8,10 +10,6 @@ session_start();
 <link href="quiz.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<?php
-include("header.php");
-include("database.php");
-?>
 <h2 class=head1> Select Topic</h2>
 <?php
 $rs=mysql_query("select * from mst_subject");
@@ -23,7 +21,7 @@ $rs=mysql_query("select * from mst_subject");
 <ul><?php
 while($row=mysql_fetch_row($rs))
 {
-	echo "<td align=center><li><a href=showtest.php?subid=$row[0]><font size=4>$row[1]</font></a></li><hr>";
+	echo "<td align=center><a href=showtest.php?subid=$row[0]><font size=4>$row[1]</font></a><hr>";
 }
 ?></ul></div></div>
 </body>

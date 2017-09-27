@@ -1,11 +1,88 @@
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+    var myDropdown = document.getElementById("myDropdown");
+      if (myDropdown.classList.contains('show')) {
+        myDropdown.classList.remove('show');
+      }
+  }
+}
+</script>
 <style type="text/css">
 <!--
 body {
 	margin-left: 0px;
 	margin-top: 0px;
 }
--->
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+	vertical-align:auto;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: #76b852;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
 </style>
+<body vlink="white" alink="white" link="white">
 <table border="0" width="100%" cellspacing="0" cellpadding="0" background="image/topbkg.jpg">
   <tr>
     <td width="90%" valign="top">
@@ -18,31 +95,42 @@ body {
         background: #76b852;
         text-align: center;
         border-bottom: 1px solid #eee;">
-  		<a href= "index.php" style="color: white;
-        font-size: 50px;
-        text-decoration: none;"> Mquiz <span style=" font-size: 50%;">(An online quizing platform)</span> </a>
+  		<a href= "index.php" style="color: white; font-size: 50px; text-decoration: none;"> Mquiz <span style=" font-size: 50%;">
+        (An online quizing platform)</span> </a>
   	</div>
 <div >
 </td>
   </tr>
 </table>
-<table border="0" width="100%" cellspacing="0" cellpadding="0" bgcolor="#000000" background="img/blackbar.jpg">
-  <tr>
-    <td width="100%" align="right"><img border="0" src="image/blackbar.jpg" width="89" height="15"></td>
-  </tr>
-  </Table>
   <Table width="100%">
   <tr>
   <td>
-  <?php @$_SESSION['login'];
+  <?php @$_SESSION['login'];	
   error_reporting(1);
   ?>
   </td>
-    <td style="color:blue">
-	<?php
-	if(isset($_SESSION['login']))
+  <?php
+$r1=mysql_query("select * from mst_subject");
+if(isset($_SESSION['login']))
 	{
-	 echo "<div align=\"right\"><strong><a href=\"index.php\"> Home </a>|<a href=\"signout.php\"> Signout</a></strong></div>";
+	 echo "<div class='container'>
+	 <a style='color:white' href='index.php'>Home</a>
+	 <div class='dropdown'>
+	 <button class='dropbtn' onclick='myFunction()'>Quiz Topic</button>
+	 <div class='dropdown-content' id='myDropdown'>";
+while($row1=mysql_fetch_row($r1))
+{
+	echo "<a href=showtest.php?subid=$row1[0]>$row1[1]</a>";
+}
+	 echo "</div>
+	 </div> 
+	<a style='color:white' href='result.php'>Result</a>
+	<a style='color:white' href='#ranking_wala_page_daalde_yahan_(header.php_ka_line_128)'>Ranking</a>
+	<div style='float:right'>
+	<a style='color:white' href='signout.php'>Signout</a>
+	</div>
+
+</div>";
 	 }
 	 else
 	 {
@@ -54,3 +142,5 @@ body {
   </tr>
 
 </table>
+<br>
+</body>

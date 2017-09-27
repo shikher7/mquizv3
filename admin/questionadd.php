@@ -8,14 +8,13 @@ error_reporting(1);
 <?php
 extract($_POST);
 
-echo "<BR>";
 if (!isset($_SESSION[alogin]))
 {
-	echo "<br><h2><div  class=head1>You are not Logged On Please Login to Access this Page</div></h2>";
+	echo "<h2><div  class=head1>You are not Logged On Please Login to Access this Page</div></h2>";
 	echo "<a href=index.php><h3 align=center>Click Here for Login</h3></a>";
 	exit();
 }
-echo "<BR><h3 class=head1>Add Question </h3>";
+echo "<h3 class=head1>Add Question </h3>";
 if($_POST[submit]=='Save' || strlen($_POST['testid'])>0 )
 {
 extract($_POST);
@@ -66,7 +65,7 @@ return true;
 }
 </script>
 
-<div style="margin:auto;width:80%;box-shadow:2px 1px 2px 2px #CCCCCC; border-radius:10px ;text-align:left">
+<div style="margin:auto;width:60%;box-shadow:2px 1px 2px 2px #CCCCCC; border-radius:10px ;text-align:left">
 <br>
 <form name="form1" method="post" onSubmit="return check();">
   <table width="80%" align="center">
@@ -89,7 +88,7 @@ echo "<option value='$row[0]'>$row[2]</option>";
     <tr>
         <td height="26"><div align="left"><strong> Enter Question </strong></div></td>
         <td>&nbsp;</td>
-	    <td><textarea name="addque" cols="60" rows="2" id="addque"></textarea></td>
+	    <td><textarea name="addque" cols="40" rows="2" id="addque"></textarea></td>
     </tr>
     <tr>
       <td height="26"><div align="left"><strong>Enter Answer1 </strong></div></td>
@@ -123,5 +122,4 @@ echo "<option value='$row[0]'>$row[2]</option>";
     </tr>
   </table>
 </form>
-<p>&nbsp; </p>
 </div>

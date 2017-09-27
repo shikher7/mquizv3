@@ -27,22 +27,6 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background:#00b8eb;
 }
-select{
-    padding: 10px;
-    width: 320px;
-    color:#fff;
-    background: rgba(87,87,85,0.87);
-
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 3px;
-    border:0;
-}
-textarea
-{
-    margin-top: 10px;
-}
-
 
 
 -->

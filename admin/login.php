@@ -34,13 +34,12 @@ else if(!isset($_SESSION[alogin]))
 ?>
 
 <p class="head1">Welcome Administrator</p><br>
-<div style="margin:auto;width:30%;box-shadow:2px 3px 2px 3px #CCCCCC;text-align:left">
+<div style="margin:auto;width:20%;box-shadow:2px 3px 2px 3px #CCCCCC; border-radius:10px; text-align:left">
 <div align="center" style="padding-top:5%">
 <p class="style7"><a href="subadd.php">Add Subject</a></p>
 <p class="style7"><a href="testadd.php">Add Test</a></p>
 <p class="style7"><a href="questionadd.php">Add Question </a></p>
-<p align="center" class="head1">&nbsp;</p>
-</div>
+<br></div>
 </div>
 </body>
 </html>
