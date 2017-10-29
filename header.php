@@ -81,6 +81,7 @@ body {
 .show {
     display: block;
 }
+<?php include("database.php"); ?>
 </style>
 <body vlink="white" alink="white" link="white">
 <table border="0" width="100%" cellspacing="0" cellpadding="0" background="image/topbkg.jpg">
