@@ -1,0 +1,40 @@
+** THIS IS THE LOG FILE FOR DATA BASE UPDATES **
+
+
+**************************LOG 1**********************
+
+MODIFIER - SHIKHER
+
+DROP THE mst_result table and use the following query in SQL WINDOW
+
+          ---------------QUERY------------
+
+CREATE TABLE `mst_result` (
+  `login` varchar(20) DEFAULT NULL,
+  `test_id` int(5) DEFAULT NULL,
+  `test_date` date DEFAULT NULL,
+  `score` int(3) DEFAULT NULL,
+  `sub_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `mst_result`
+--
+
+INSERT INTO `mst_result` (`login`, `test_id`, `test_date`, `score`, `sub_id`) VALUES
+('raj', 8, '0000-00-00', 3, 1),
+('raj', 9, '0000-00-00', 3, 1),
+('raj', 8, '0000-00-00', 1, 1),
+('ashish', 10, '0000-00-00', 3, 1),
+('ashish', 9, '0000-00-00', 2, 1),
+('ashish', 10, '0000-00-00', 0, 1),
+('raj', 8, '0000-00-00', 0, 1),
+('ankur', 11, '0000-00-00', 0, 7),
+('ashish', 11, '0000-00-00', 0, 7),
+('shikher', 11, '0000-00-00', 0, 7);
+COMMIT;
+
+            -----------------------------------
+
+****************************************************************************
+
