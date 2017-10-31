@@ -22,6 +22,32 @@ if(!isset($_SESSION[sid]) || !isset($_SESSION[tid]))
 	header("location: index.php");
 }
 ?>
+<script>
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+			document.getElementById("nextq").click(); // Click on the checkbox
+			document.getElementById("getr").click(); // Click on the checkbox
+			        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var fiveMinutes = 20,
+        display = document.querySelector('#time');
+    startTimer(fiveMinutes, display);
+};
+</script>
 <html>
 <head>
 <title>Online Quiz</title>
@@ -108,13 +134,16 @@ echo "<tr align='center'><th><span class=style2>Question ".  $n .": $row[2]</sty
 echo "<tr><td class=style8><input type=radio name=ans value=1>$row[3]";
 echo "<tr><td class=style8> <input type=radio name=ans value=2>$row[4]";
 echo "<tr><td class=style8><input type=radio name=ans value=3>$row[5]";
-echo "<tr><td class=style8><input type=radio name=ans value=4>$row[6]<br><hr>";
+echo "<tr><td class=style8><input type=radio name=ans value=4>$row[6]";
+echo "<tr><td style='display:none' class=style8><input checked type=radio name=ans>Wrong ANS<br><hr>";
 
 if($_SESSION[qn]<mysql_num_rows($rs)-1)
-echo "<tr><td colspan=2 align=center class='errors'><input style='background-color:blue; color:white; border:#0000FF' name='submit' id='submit' type=submit  value='Next Question'></td></tr></form>";
+echo "<tr><td colspan=2 align=center class='errors'><input id='nextq' style='background-color:blue; color:white; border:#0000FF' name='submit' id='submit' type=submit  value='Next Question'></td></tr></form>";
 else
-echo "<tr><td colspan=2 align=center class='errors'><input class='errors' type=submit style='background-color:blue; background-size:auto; color:white; border:#0000FF' name=submit value='Get Result'></form></div>";
-echo "</table></table>";
+echo "<tr><td colspan=2 align=center class='errors'><input id='getr' class='errors' type=submit style='background-color:blue; background-size:auto; color:white; border:#0000FF' name=submit value='Get Result'></form></div>";
+echo "</table></table></div>";
 ?>
-</body >
+<div align="center" style="font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans', Verdana, sans-serif">Time Remaining for this Question : <span id="time">20</span> seconds!</div>
+
+</body>
 </html>

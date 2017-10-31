@@ -119,7 +119,7 @@ if(isset($_SESSION['login']))
 	 echo "<div class='container'>
 	 <a style='color:white' href='index.php'>Home</a>
 	 <div class='dropdown'>
-	 <button class='dropbtn' onclick='myFunction()'>Quiz Topic</button>
+	 <button class='dropbtn'>Quiz Topic</button>
 	 <div class='dropdown-content' id='myDropdown'>";
 while($row1=mysql_fetch_row($r1))
 {
